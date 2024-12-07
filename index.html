@@ -7,70 +7,33 @@
     <link rel="stylesheet" href="./css/bootstrap-utilities.css">
     <link rel="shortcut icon" href="./img/logo-color.png" type="image/x-icon">
     <script src="./js/bootstrap.min.js"></script>
-    <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./js/sdk.js"></script>
     <title>MyLog</title>
 </head>
 <body data-bs-theme="dark">
 
     <main>
-        <header class="border-bottom d-flex justify-content-between align-items-center p-3">
-    <h1 class="mb-0">MyLog</h1>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">
-        Tambah Maintenance
-    </button>
-</header>
-        <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="addModalLabel">Tambah Maintenance</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="maintenanceForm">
-                            <div class="mb-3">
-                                <label for="judul" class="form-label">Maintenance</label>
-                                <input type="text" class="form-control" id="judul" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="deskripsi" class="form-label">Deskripsi</label>
-                                <textarea class="form-control" id="deskripsi" rows="3" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Unggah</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <header class="border-bottom text-center p-3">
+            <h1 class="mb-0">MyLog</h1>
+        </header>
 
-        <div class="container mt-4" id="maintenanceList"></div>
-
-        <div class="modal fade" id="trackModal" tabindex="-1" aria-labelledby="trackModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="trackModalLabel">Pelacakan Pengunggah Maintenance</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- Form Login -->
+        <section class="d-flex justify-content-center align-items-center vh-100">
+            <div class="card p-4 shadow" style="max-width: 400px; width: 100%;">
+                <h2 class="text-center mb-4">Login</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Masukkan email" required>
                     </div>
-                    <div class="modal-body" id="userAgentInfo"></div>
-                </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Masukkan password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                </form>
             </div>
-        </div>
-
-        <div class="modal fade" id="accessKeyModal" tabindex="-1" aria-labelledby="accessKeyModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="accessKeyModalLabel">Kunci Akses</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <input type="password" id="accessKeyInput" class="form-control" placeholder="Masukkan Kunci Akses">
-                        <button class="btn btn-danger mt-3" id="deleteButton">Hapus</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
     </main>
 </body>
 </html>

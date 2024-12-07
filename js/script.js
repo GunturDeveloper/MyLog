@@ -16,6 +16,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/fireba
         const db = getFirestore(app);
         const maintenanceRef = collection(db, "maintenance");
         let deleteId = null;
+        
 
         async function loadMaintenanceData() {
             const snapshot = await getDocs(maintenanceRef);
@@ -62,6 +63,10 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/fireba
             bootstrap.Modal.getOrCreateInstance(document.getElementById('accessKeyModal')).show();
         };
 
+       document.getElementById('logout').addEventListener('click', async function() {
+           window.location.href="index.html";
+       });
+       
         document.getElementById('deleteButton').addEventListener('click', async function() {
             const accessKey = document.getElementById('accessKeyInput').value;
             if (accessKey === "smtiyktm") {
